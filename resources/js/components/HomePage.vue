@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>
+    <h1 class="bg-blue-200">
       {{ title }}
     </h1>
     <h2>Bienvenue dans l'application des stars</h2>
@@ -52,3 +52,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>
