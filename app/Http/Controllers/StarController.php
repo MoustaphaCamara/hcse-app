@@ -15,7 +15,7 @@ class StarController extends Controller
     public function index()
     {
         // json db response
-        $stars = Star::all(['firstname', 'lastname', 'description', 'src', 'alt']);
+        $stars = Star::all(['id', 'firstname', 'lastname', 'description', 'src', 'alt']);
         return response()->json($stars);
     }
 

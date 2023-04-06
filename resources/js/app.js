@@ -1,7 +1,19 @@
-require('./bootstrap')
+require('./bootstrap');
 
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
-import HomePage from './components/HomePage.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import VueAxios from "vue-axios";
+import axios from "axios";
 
-createApp(HomePage).mount('#app');
+import App from './components/App.vue';
+import {routes} from './routes';
+
+ 
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+  });
+
+
+createApp(App).use(router,axios, VueAxios).mount('#app')

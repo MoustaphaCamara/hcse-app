@@ -1,4 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/resource/js/components/homepage.js": "/js/resource/js/components/homepage.js",
+    "/js/resource/js/components/star/listofstars.js": "/js/resource/js/components/star/listofstars.js",
+    "/js/resource/js/components/star/addstar.js": "/js/resource/js/components/star/addstar.js",
+    "/js/resource/js/components/star/editstar.js": "/js/resource/js/components/star/editstar.js",
     "/css/app.css": "/css/app.css"
 }
