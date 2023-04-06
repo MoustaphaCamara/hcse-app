@@ -2,7 +2,7 @@
 <template>
   <main class="container mx-auto">
     <nav>
-      <div>
+      <div class="flex flex-row justify-between items-center">
         <router-link to="/" href="#"
           ><img
             src="https://www.hellocse.fr/images/logo/hellocse.svg?v=2"

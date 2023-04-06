@@ -12,6 +12,8 @@ module.exports = {
         'light-main-hover':'rgb(184, 207, 218)',
         'main': 'rgb(21,142,189)',
         'main-hover' : 'rgb(17, 108, 145)',
+        'second':'rgb(254,243,233)',
+        'dark-second':'rgb(207, 198, 189)'
       }
     },
   },
