@@ -2,10 +2,13 @@
 <template>
   <div class="container">
     <h3>Stars</h3>
-    <button type="button" @click="addStar()">Ajouter des stars</button>
-
-    <table>
-      <thead>
+    <ButtonAction
+      @click="addStar()"
+      content="Ajouter des stars"
+      color="bg-green-600 hover:bg-green-800"
+    />
+    <table class="table-fixed w-full text-sm text-left text-slate-700">
+      <thead class="text-xs uppercase bg-main text-light-main">
         <tr>
           <th>id</th>
           <th>Nom</th>
@@ -16,7 +19,11 @@
         </tr>
       </thead>
       <tbody v-if="stars.length > 0">
-        <tr v-for="(star, key) in stars" :key="key">
+        <tr
+          v-for="(star, key) in stars"
+          :key="key"
+          class="border-b bg-light-main border-main text-main hover:bg-second transition-all"
+        >
           <td>{{ star.id }}</td>
           <td>{{ star.lastname }}</td>
           <td>{{ star.firstname }}</td>
@@ -26,10 +33,12 @@
             {{ star.src }}
           </td>
           <td>
-            <button type="button" @click="editStar(star.id)">Editer</button>
-            <button type="button" @click="deleteStar(star.id)">
-              Supprimer
-            </button>
+            <ButtonAction @click="editStar(star.id)" content="Editer" />
+            <ButtonAction
+              @click="deleteStar(star.id)"
+              content="Supprimer"
+              color="bg-red-600 hover:bg-red-800"
+            />
           </td>
         </tr>
       </tbody>
@@ -43,8 +52,12 @@
 </template>
 
 <script>
+import ButtonAction from "../../components/button/ButtonAction.vue";
 export default {
   name: "ListOfStars",
+  components: {
+    ButtonAction,
+  },
   data() {
     return {
       stars: [],
@@ -55,10 +68,6 @@ export default {
   },
   methods: {
     addStar() {
-      /*
-    <!-- <router-link :to='{name:"addstar"}' >Ajouter des stars</router-link> -->
-
-*/
       this.$router.push({
         path: `/star/add`,
       });
@@ -68,7 +77,6 @@ export default {
         .get("/api/star")
         .then((response) => {
           this.stars = response.data;
-          console.log(response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -79,7 +87,7 @@ export default {
       if (confirm("Souhaites-tu vraiment supprimer cette star des VIPs?")) {
         axios
           .delete(`/api/star/${id}`)
-          .then((response) => this.getStars())
+          .then(() => this.getStars())
           .catch((error) => console.log(error));
       }
     },

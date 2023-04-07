@@ -19,14 +19,21 @@
         <label for="photo">Photo (url)</label>
         <input type="text" name="photo" v-model="star.src" />
       </div>
-      <button type="submit">Valider</button>
+      <ButtonAction
+        content="Valider"
+        color="bg-green-600 hover:bg-green-800"
+        type="submit"
+      />
     </form>
   </div>
 </template>
   
   <script>
+import ButtonAction from "../../components/button/ButtonAction.vue";
+
 export default {
   name: "EditStar",
+  components: { ButtonAction },
   data() {
     return {
       star: {

@@ -21,14 +21,22 @@ Personal preference, I chose src/alt for picture choice, instead of uploading lo
         <label for="photo">Photo (url)</label>
         <input type="text" name="photo" v-model="star.src" />
       </div>
-      <button type="submit">Ajouter</button>
+
+      <ButtonAction
+        content="Ajouter"
+        color="bg-green-600 hover:bg-green-800"
+        type="submit"
+      />
     </form>
   </div>
 </template>
 
 <script>
+import ButtonAction from "../../components/button/ButtonAction.vue";
+
 export default {
   name: "AddStar",
+  components: { ButtonAction },
   data() {
     return {
       star: {
