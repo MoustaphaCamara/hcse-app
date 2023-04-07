@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["bg-main hover:bg-main-hover text-white font-bold py-2 px-0 sm:px-4 rounded m-2 transition-all", $props.color])
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["bg-main hover:bg-main-hover text-white font-bold py-2 px-0 sm:px-4 rounded my-2 transition-all", $props.color])
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.content), 3 /* TEXT, CLASS */);
 }
 
