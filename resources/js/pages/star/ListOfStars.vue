@@ -1,53 +1,76 @@
 <!-- admin page where you will display, edit and delete stars. you can also create new ones -->
 <template>
-  <div class="container">
-    <h3>Stars</h3>
+  <div class="container w-screen">
     <ButtonAction
       @click="addStar()"
       content="Ajouter des stars"
       color="bg-green-600 hover:bg-green-800"
     />
-    <table class="table-fixed w-full text-sm text-left text-slate-700">
-      <thead class="text-xs uppercase bg-main text-light-main">
-        <tr>
-          <th>id</th>
-          <th>Nom</th>
-          <th>Prénom</th>
-          <th>Description</th>
-          <th>Photo</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody v-if="stars.length > 0">
-        <tr
-          v-for="(star, key) in stars"
-          :key="key"
-          class="border-b bg-light-main border-main text-main hover:bg-second transition-all"
-        >
-          <td>{{ star.id }}</td>
-          <td>{{ star.lastname }}</td>
-          <td>{{ star.firstname }}</td>
-          <td>{{ star.description }}</td>
-          <td>
-            <img :src="star.src" :alt="star.alt" />
-            {{ star.src }}
-          </td>
-          <td>
-            <ButtonAction @click="editStar(star.id)" content="Editer" />
-            <ButtonAction
-              @click="deleteStar(star.id)"
-              content="Supprimer"
-              color="bg-red-600 hover:bg-red-800"
-            />
-          </td>
-        </tr>
-      </tbody>
-      <tbody v-else>
-        <tr>
-          <td colspan="6" align="center">Pas de star par ici..</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="overflow-x-auto">
+      <table
+        class="table-fixed lg:w-full lg:mx-auto text-sm text-left text-slate-700"
+      >
+        <thead class="text-xs uppercase bg-main text-light-main">
+          <tr>
+            <th scope="col" class="px-6 py-3">id</th>
+            <th scope="col" class="px-6 py-3">Nom</th>
+            <th scope="col" class="px-6 py-3">Prénom</th>
+            <th scope="col" class="px-6 py-3">Description</th>
+            <th scope="col" class="px-6 py-3">Photo</th>
+            <th scope="col" class="px-6 py-3">Actions</th>
+          </tr>
+        </thead>
+        <tbody v-if="stars.length > 0">
+          <tr
+            v-for="(star, key) in stars"
+            :key="key"
+            class="border-b bg-light-main border-main text-main hover:bg-second transition-all"
+          >
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-slate-900 whitespace-nowrap"
+            >
+              {{ star.id }}
+            </th>
+            <td class="px-6 py-4 font-medium text-slate-900">
+              {{ star.lastname }}
+            </td>
+            <td class="px-6 py-4">{{ star.firstname }}</td>
+            <td class="px-6 py-4">{{ star.description }}</td>
+            <td>
+              <img
+                :src="star.src"
+                :alt="'photo of ' + star.firstname"
+                class="w-full sm:w-24 rounded-md"
+              />
+            </td>
+            <!-- large screen actions -->
+            <td class="hidden px-6 py-4 lg:flex lg:flex-col">
+              <ButtonAction @click="editStar(star.id)" content="Editer" />
+              <ButtonAction
+                @click="deleteStar(star.id)"
+                content="Supprimer"
+                color="bg-red-600 hover:bg-red-800"
+              />
+            </td>
+            <!-- small screen actions -->
+            <td class="lg:hidden px-6 py-4 flex flex-col">
+              <ButtonAction @click="editStar(star.id)" content="&#9881;" />
+              <ButtonAction
+                @click="deleteStar(star.id)"
+                content="&#10005;"
+                color="bg-red-600 hover:bg-red-800"
+              />
+            </td>
+          </tr>
+        </tbody>
+        <tbody v-else>
+          <tr>
+            <td colspan="6" align="center">Pas de star par ici..</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
