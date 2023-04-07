@@ -6,7 +6,7 @@
       content="Ajouter des stars"
       color="bg-green-600 hover:bg-green-800"
     />
-    <div class="">
+    <div>
       <table
         class="table-fixed md:w-full mx-auto text-sm text-left text-slate-700"
       >

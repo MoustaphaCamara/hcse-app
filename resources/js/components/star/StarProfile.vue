@@ -14,6 +14,27 @@
       <p>
         {{ stars[currentIndex].description }}
       </p>
+      <div>
+        <ul
+          class="flex justify-evenly items-center w-2/4 mx-auto text-3xl text-main"
+        >
+          <li>
+            <i
+              class="fa-brands fa-square-twitter hover:-translate-y-1 transition-all"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-brands fa-square-facebook hover:-translate-y-1 transition-all"
+            ></i>
+          </li>
+          <li>
+            <i
+              class="fa-brands fa-instagram hover:-translate-y-1 transition-all"
+            ></i>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -43,5 +64,8 @@ export default {
   line-height: 1.5rem;
   word-spacing: 0.3rem;
   margin: 2rem 0;
+}
+li i {
+  cursor: pointer;
 }
 </style>
