@@ -1,6 +1,10 @@
 <template>
   <div class="bg-light-main w-2/3 h-full app__star-container">
-    <img :src="stars[currentIndex].src" alt="" class="mx-auto rounded-2xl" />
+    <img
+      :src="stars[currentIndex].src"
+      :alt="'photo of ' + stars[currentIndex].firstname"
+      class="mx-auto rounded-2xl w-20 h-20"
+    />
     <h2 class="app__container-title">
       {{ stars[currentIndex].firstname }}
       {{ stars[currentIndex].lastname }}

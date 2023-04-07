@@ -61,7 +61,6 @@ export default {
     },
     changeIndex(param) {
       this.currentIndex = param - 1;
-      // console.log(param);
     },
   },
   components: { StarList, StarProfile },
