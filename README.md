@@ -15,9 +15,9 @@ Indications :
 
 ## Get started
 
-Prérequis :
+Prerequisite :
 
-- Installer php & composer dans votre environnement
+- Install php & composer in your environment
 
 ### Install the project
 
