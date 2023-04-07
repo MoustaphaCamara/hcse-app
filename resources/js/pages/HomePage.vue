@@ -1,8 +1,8 @@
 <template>
   <div class="app__container lg:w-4/5 mx-auto">
-    <h2 class="app__container-title">
+    <h1 class="text-main text-center font-bold text-3xl">
       {{ title }}
-    </h2>
+    </h1>
     <p class="app__container-description">{{ appDescription }}</p>
     <div v-if="stars.length > 0">
       <h3>Ci-après une liste de VIPs :</h3>
@@ -61,7 +61,6 @@ export default {
     },
     changeIndex(param) {
       this.currentIndex = param;
-      console.log(this.currentIndex);
     },
   },
   components: { StarList, StarProfile },

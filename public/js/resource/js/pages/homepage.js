@@ -130,7 +130,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     changeIndex: function changeIndex(param) {
       this.currentIndex = param;
-      console.log(this.currentIndex);
     }
   }
 }, "components", {
@@ -158,9 +157,9 @@ var _hoisted_1 = {
 var _hoisted_2 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_StarListItem = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StarListItem");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("ul", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.stars, function (star, key) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
-      "class": "bg-second relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b text-slate-900 border-dark-second hover:bg-dark-second active:bg-white",
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("ul", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.stars, function (star, key) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+      "class": "bg-second relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b text-slate-900 border-dark-second hover:bg-dark-second active:bg-white focus:bg-light-main",
       key: key,
       onClick: function onClick($event) {
         return $options.passCurrentId(key);
@@ -168,7 +167,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarListItem, {
       star: star
     }, null, 8 /* PROPS */, ["star"])], 8 /* PROPS */, _hoisted_2);
-  }), 128 /* KEYED_FRAGMENT */))]);
+  }), 128 /* KEYED_FRAGMENT */))])]);
 }
 
 /***/ }),
@@ -241,7 +240,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     src: $props.stars[$props.currentIndex].src,
     alt: 'photo of ' + $props.stars[$props.currentIndex].firstname,
     "class": "mx-auto rounded-lg w-20 h-20 mb-2"
-  }, null, 8 /* PROPS */, _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].firstname) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].lastname), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].description), 1 /* TEXT */)])]);
+  }, null, 8 /* PROPS */, _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].lastname) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].firstname), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].description), 1 /* TEXT */)])]);
 }
 
 /***/ }),
@@ -262,7 +261,7 @@ var _hoisted_1 = {
   "class": "app__container lg:w-4/5 mx-auto"
 };
 var _hoisted_2 = {
-  "class": "app__container-title"
+  "class": "text-main text-center font-bold text-3xl"
 };
 var _hoisted_3 = {
   "class": "app__container-description"
@@ -282,7 +281,7 @@ var _hoisted_9 = [_hoisted_8];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_StarList = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StarList");
   var _component_StarProfile = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StarProfile");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.appDescription), 1 /* TEXT */), $data.stars.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" list of Stars "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarList, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.appDescription), 1 /* TEXT */), $data.stars.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" list of Stars "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarList, {
     stars: $data.stars,
     onOnCurrentChange: _cache[0] || (_cache[0] = function ($event) {
       return $options.changeIndex($event);

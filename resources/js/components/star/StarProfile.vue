@@ -8,8 +8,8 @@
         class="mx-auto rounded-lg w-20 h-20 mb-2"
       />
       <h2 class="app__container-title mb-2 text-lg">
-        {{ stars[currentIndex].firstname }}
         {{ stars[currentIndex].lastname }}
+        {{ stars[currentIndex].firstname }}
       </h2>
       <p>
         {{ stars[currentIndex].description }}
