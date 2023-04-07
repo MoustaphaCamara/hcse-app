@@ -1,5 +1,5 @@
 <template>
-  <div class="app__container">
+  <div class="app__container lg:w-4/5 mx-auto">
     <h2 class="app__container-title">
       {{ title }}
     </h2>
@@ -7,7 +7,7 @@
     <div v-if="stars.length > 0">
       <h3>Ci-après une liste de VIPs :</h3>
       <div
-        class="w-full flex justify-center items-center bg-light-main rounded-2xl mt-7"
+        class="w-full lg:mx-auto max-w-3xl block sm:flex sm:justify-center bg-light-main rounded-2xl mt-7"
       >
         <!-- list of Stars -->
         <StarList :stars="stars" @onCurrentChange="changeIndex($event)" />
@@ -68,20 +68,4 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap");
-.app__container {
-  font-family: "Raleway";
-}
-.app__container-title {
-  font-size: 2rem;
-  text-align: center;
-  color: rgb(22, 142, 189);
-  font-weight: bold;
-}
-.app__container-description {
-  font-style: italic;
-  line-height: 1.5rem;
-  word-spacing: 0.3rem;
-  margin: 2rem 0;
-}
 </style>
