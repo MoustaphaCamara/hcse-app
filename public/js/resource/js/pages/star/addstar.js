@@ -76,6 +76,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         description: "",
         src: ""
       },
+      randomUser: {
+        lastname: "",
+        firstname: "",
+        photo: "",
+        description: ""
+      },
+      link: false,
       title: "Renseigner une star",
       action: "Ajouter"
     };
@@ -100,6 +107,30 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return _context.stop();
           }
         }, _callee);
+      }))();
+    },
+    getRandomUser: function getRandomUser() {
+      var _this2 = this;
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return axios.get("https://randomuser.me/api/").then(function (_ref) {
+                var data = _ref.data;
+                var user = data.results[0];
+                _this2.randomUser.lastname = user.name.last;
+                _this2.randomUser.firstname = user.name.first;
+                _this2.randomUser.photo = user.picture.large;
+                _this2.link = true;
+              });
+            case 2:
+              _this2.randomUser.description = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus dignissimos harum vitae natus nihil veniam. Beatae mollitia necessitatibus, animi aspernatur pariatur iure libero quaerat voluptatibus atque, rem cupiditate autem quod!";
+            case 3:
+            case "end":
+              return _context2.stop();
+          }
+        }, _callee2);
       }))();
     }
   }
@@ -213,7 +244,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $props.star.src = $event;
     }),
     "class": "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
-    placeholder: "https://..."
+    placeholder: "https://picsum.photos/100"
   }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $props.star.src]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ButtonAction, {
     content: $props.action,
     color: "bg-green-600 hover:bg-green-800",
@@ -235,14 +266,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "text-center"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_StarForm = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StarForm");
+  var _component_ButtonAction = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ButtonAction");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarForm, {
     title: $data.title,
     star: $data.star,
     action: $data.action,
     onSubmit: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)($options.create, ["prevent"])
-  }, null, 8 /* PROPS */, ["title", "star", "action", "onSubmit"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://laracasts.com/discuss/channels/vue/atsubmitprevent-or-just-atclick ")], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
+  }, null, 8 /* PROPS */, ["title", "star", "action", "onSubmit"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" https://laracasts.com/discuss/channels/vue/atsubmitprevent-or-just-atclick "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ButtonAction, {
+    content: "Générer infos random",
+    onClick: $options.getRandomUser
+  }, null, 8 /* PROPS */, ["onClick"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.randomUser.firstname), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.randomUser.lastname), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.randomUser.description), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.randomUser.photo), 1 /* TEXT */)])])])], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),

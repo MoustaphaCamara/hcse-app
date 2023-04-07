@@ -8,6 +8,23 @@ Personal preference, I chose src/alt for picture choice, instead of uploading lo
     @submit.prevent="create"
   />
   <!-- https://laracasts.com/discuss/channels/vue/atsubmitprevent-or-just-atclick -->
+  <div class="text-center">
+    <ButtonAction content="Générer infos random" @click="getRandomUser" />
+    <ul>
+      <li>
+        <p>{{ randomUser.firstname }}</p>
+      </li>
+      <li>
+        <p>{{ randomUser.lastname }}</p>
+      </li>
+      <li>
+        <p>{{ randomUser.description }}</p>
+      </li>
+      <li>
+        <p>{{ randomUser.photo }}</p>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -25,6 +42,13 @@ export default {
         description: "",
         src: "",
       },
+      randomUser: {
+        lastname: "",
+        firstname: "",
+        photo: "",
+        description: "",
+      },
+      link: false,
       title: "Renseigner une star",
       action: "Ajouter",
     };
@@ -37,6 +61,17 @@ export default {
           this.$router.push({ name: "ListOfStars" });
         })
         .catch((error) => console.log(error));
+    },
+    async getRandomUser() {
+      await axios.get("https://randomuser.me/api/").then(({ data }) => {
+        const user = data.results[0];
+        this.randomUser.lastname = user.name.last;
+        this.randomUser.firstname = user.name.first;
+        this.randomUser.photo = user.picture.large;
+        this.link = true;
+      });
+      this.randomUser.description =
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus dignissimos harum vitae natus nihil veniam. Beatae mollitia necessitatibus, animi aspernatur pariatur iure libero quaerat voluptatibus atque, rem cupiditate autem quod!";
     },
   },
 };

@@ -8,7 +8,7 @@
     />
     <div class="overflow-x-auto">
       <table
-        class="table-fixed lg:w-full lg:mx-auto text-sm text-left text-slate-700"
+        class="table-fixed md:w-full mx-auto text-sm text-left text-slate-700"
       >
         <thead class="text-xs uppercase bg-main text-light-main">
           <tr>
@@ -36,7 +36,9 @@
               {{ star.lastname }}
             </td>
             <td class="px-6 py-4">{{ star.firstname }}</td>
-            <td class="px-6 py-4">{{ star.description }}</td>
+            <td class="px-6 overflow-hidden description">
+              {{ star.description }}
+            </td>
             <td>
               <img
                 :src="star.src"
@@ -123,5 +125,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
 </style>

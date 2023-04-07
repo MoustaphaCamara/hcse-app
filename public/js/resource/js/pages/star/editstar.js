@@ -244,7 +244,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $props.star.src = $event;
     }),
     "class": "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
-    placeholder: "https://..."
+    placeholder: "https://picsum.photos/100"
   }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $props.star.src]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ButtonAction, {
     content: $props.action,
     color: "bg-green-600 hover:bg-green-800",
