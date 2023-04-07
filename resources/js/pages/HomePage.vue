@@ -42,10 +42,12 @@
             {{ stars[currentIndex].firstname }}
             {{ stars[currentIndex].lastname }}
           </h2>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam hic
-          eum ullam libero sit temporibus aliquid odio voluptates, delectus vel
-          animi. Hic eveniet, mollitia similique error voluptatibus ullam itaque
-          cumque!
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam hic
+            eum ullam libero sit temporibus aliquid odio voluptates, delectus
+            vel animi. Hic eveniet, mollitia similique error voluptatibus ullam
+            itaque cumque!
+          </p>
         </div>
       </div>
     </div>
