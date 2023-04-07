@@ -1,8 +1,8 @@
-const HomePage = () => import('./components/HomePage.vue' /* webpackChunkName: "resource/js/components/homepage" */);
+const HomePage = () => import('./pages/HomePage.vue' /* webpackChunkName: "resource/js/pages/homepage" */);
 // star components
-const ListOfStars = () => import('./components/star/ListOfStars.vue' /* webpackChunkName: "resource/js/components/star/listofstars" */);
-const AddStar = () => import('./components/star/AddStar.vue' /* webpackChunkName: "resource/js/components/star/addstar" */) ;
-const EditStar = () => import('./components/star/EditStar.vue' /* webpackChunkName: "resource/js/components/star/editstar" */);
+const ListOfStars = () => import('./pages/star/ListOfStars.vue' /* webpackChunkName: "resource/js/pages/star/listofstars" */);
+const AddStar = () => import('./pages/star/AddStar.vue' /* webpackChunkName: "resource/js/pages/star/addstar" */) ;
+const EditStar = () => import('./pages/star/EditStar.vue' /* webpackChunkName: "resource/js/pages/star/editstar" */);
 
 export const routes = [
     {
