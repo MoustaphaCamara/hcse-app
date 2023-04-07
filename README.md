@@ -15,6 +15,10 @@ Indications :
 
 ## Get started
 
+Prérequis :
+
+- Installer php & composer dans votre environnement
+
 ### Install the project
 
 To get started, clone the repository :
