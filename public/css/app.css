@@ -506,6 +506,9 @@ video {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 .m-5 {
   margin: 1.25rem;
 }
@@ -526,6 +529,10 @@ video {
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .mb-8 {
   margin-bottom: 2rem;
@@ -707,6 +714,9 @@ video {
 }
 .self-center {
   align-self: center;
+}
+.justify-self-center {
+  justify-self: center;
 }
 .overflow-auto {
   overflow: auto;

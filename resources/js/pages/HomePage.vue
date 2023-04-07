@@ -3,7 +3,7 @@
     <h2 class="app__container-title">
       {{ title }}
     </h2>
-    <p class="app__container-description">{{ description }}</p>
+    <p class="app__container-description">{{ appDescription }}</p>
     <div v-if="stars.length > 0">
       <h3>Ci-après une liste de VIPs :</h3>
       <div
@@ -40,7 +40,7 @@ export default {
       stars: [],
       currentIndex: 0,
       title: "Stars App",
-      description:
+      appDescription:
         "Description de l'applicationlorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam maxime est error sit accusamus saepe vero eligendi laudantium velit doloribus rerum aperiam, labore laborum.",
     };
   },
@@ -60,7 +60,8 @@ export default {
         });
     },
     changeIndex(param) {
-      this.currentIndex = param - 1;
+      this.currentIndex = param;
+      console.log(this.currentIndex);
     },
   },
   components: { StarList, StarProfile },

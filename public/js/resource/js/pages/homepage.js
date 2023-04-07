@@ -101,7 +101,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       stars: [],
       currentIndex: 0,
       title: "Stars App",
-      description: "Description de l'applicationlorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam maxime est error sit accusamus saepe vero eligendi laudantium velit doloribus rerum aperiam, labore laborum."
+      appDescription: "Description de l'applicationlorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam maxime est error sit accusamus saepe vero eligendi laudantium velit doloribus rerum aperiam, labore laborum."
     };
   },
   mounted: function mounted() {
@@ -129,7 +129,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     changeIndex: function changeIndex(param) {
-      this.currentIndex = param - 1;
+      this.currentIndex = param;
+      console.log(this.currentIndex);
     }
   }
 }, "components", {
@@ -162,7 +163,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "class": "bg-second relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b text-slate-900 border-dark-second hover:bg-dark-second active:bg-white",
       key: key,
       onClick: function onClick($event) {
-        return $options.passCurrentId(star.id);
+        return $options.passCurrentId(key);
       }
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarListItem, {
       star: star
@@ -235,15 +236,12 @@ var _hoisted_4 = ["src", "alt"];
 var _hoisted_5 = {
   "class": "app__container-title mb-2 text-lg"
 };
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam hic eum ullam libero sit temporibus aliquid odio voluptates, delectus vel animi. Hic eveniet, mollitia similique error voluptatibus ullam itaque cumque! ", -1 /* HOISTED */);
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste culpa ipsam sapiente enim, amet blanditiis eos ut, neque et distinctio perferendis! Tenetur dicta temporibus laudantium porro, doloribus consequatur eaque quisquam voluptatibus harum fugiat. Similique, voluptatibus excepturi nisi incidunt voluptas porro, quod libero rerum unde at odio eaque? Laboriosam at quam aliquam porro asperiores quis voluptatum incidunt ex modi earum excepturi quasi reprehenderit rerum odit laborum dolore libero distinctio velit nostrum placeat exercitationem ab culpa, consequuntur nobis? In porro eos, quia voluptates, suscipit, nisi fugit officiis repellat magni placeat exercitationem vel quos mollitia. Laboriosam dicta id optio, quisquam nihil asperiores atque! ", -1 /* HOISTED */);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: $props.stars[$props.currentIndex].src,
     alt: 'photo of ' + $props.stars[$props.currentIndex].firstname,
     "class": "mx-auto rounded-lg w-20 h-20 mb-2"
-  }, null, 8 /* PROPS */, _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].firstname) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].lastname), 1 /* TEXT */), _hoisted_6, _hoisted_7])]);
+  }, null, 8 /* PROPS */, _hoisted_4), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].firstname) + " " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].lastname), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.stars[$props.currentIndex].description), 1 /* TEXT */)])]);
 }
 
 /***/ }),
@@ -284,7 +282,7 @@ var _hoisted_9 = [_hoisted_8];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_StarList = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StarList");
   var _component_StarProfile = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StarProfile");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.description), 1 /* TEXT */), $data.stars.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" list of Stars "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarList, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.appDescription), 1 /* TEXT */), $data.stars.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" list of Stars "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarList, {
     stars: $data.stars,
     onOnCurrentChange: _cache[0] || (_cache[0] = function ($event) {
       return $options.changeIndex($event);

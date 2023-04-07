@@ -6,7 +6,7 @@
       class="bg-second relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b text-slate-900 border-dark-second hover:bg-dark-second active:bg-white"
       v-for="(star, key) in stars"
       :key="key"
-      @click="passCurrentId(star.id)"
+      @click="passCurrentId(key)"
     >
       <StarListItem :star="star" />
     </li>

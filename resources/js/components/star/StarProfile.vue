@@ -12,23 +12,7 @@
         {{ stars[currentIndex].lastname }}
       </h2>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam hic eum
-        ullam libero sit temporibus aliquid odio voluptates, delectus vel animi.
-        Hic eveniet, mollitia similique error voluptatibus ullam itaque cumque!
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste culpa
-        ipsam sapiente enim, amet blanditiis eos ut, neque et distinctio
-        perferendis! Tenetur dicta temporibus laudantium porro, doloribus
-        consequatur eaque quisquam voluptatibus harum fugiat. Similique,
-        voluptatibus excepturi nisi incidunt voluptas porro, quod libero rerum
-        unde at odio eaque? Laboriosam at quam aliquam porro asperiores quis
-        voluptatum incidunt ex modi earum excepturi quasi reprehenderit rerum
-        odit laborum dolore libero distinctio velit nostrum placeat
-        exercitationem ab culpa, consequuntur nobis? In porro eos, quia
-        voluptates, suscipit, nisi fugit officiis repellat magni placeat
-        exercitationem vel quos mollitia. Laboriosam dicta id optio, quisquam
-        nihil asperiores atque!
+        {{ stars[currentIndex].description }}
       </p>
     </div>
   </div>
