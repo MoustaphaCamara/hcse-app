@@ -154,10 +154,13 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "sm:w-1/3 w-full bg-dark-second border-dark-second text-slate-800 flex flex-col items-center"
 };
-var _hoisted_2 = ["onClick"];
+var _hoisted_2 = {
+  "class": "w-full"
+};
+var _hoisted_3 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_StarListItem = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("StarListItem");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("ul", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.stars, function (star, key) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("ul", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.stars, function (star, key) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       "class": "bg-second relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b text-slate-900 border-dark-second hover:bg-dark-second active:bg-white focus:bg-light-main",
       key: key,
@@ -166,7 +169,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_StarListItem, {
       star: star
-    }, null, 8 /* PROPS */, ["star"])], 8 /* PROPS */, _hoisted_2);
+    }, null, 8 /* PROPS */, ["star"])], 8 /* PROPS */, _hoisted_3);
   }), 128 /* KEYED_FRAGMENT */))])]);
 }
 
