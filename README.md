@@ -35,10 +35,9 @@ composer install
 
 ```
 
-Now open with VS Code with the command `code .` and start by creating a ".env" file.
+Now open with VS Code with the command `code .` and start by duplicating  the `.env.example` file and rename it `.env`.
 
-Copy the content of .env.example file inside this new file, and open a new terminal.
-Run the command :
+Open a new terminal and run the command :
 ```
 php artisan key:generate
 ```
@@ -46,18 +45,28 @@ php artisan key:generate
 
 For this project, I used WAMP. You can apply the next steps with any environment you're used to.
 
-With WAMP :
+Method 1 :
 
-Open phpMyAdmin, then create a new database.
-(for this project, you can import this one if you want to : [stars app]().
-Please note that the name  should be the same one as the variable in .env file named "DB_DATABASE". Same goes for your DB_USERNAME and DB_PASSWORD. Encode in utf8mb4.
+Open phpMyAdmin and import the following database : [stars_app](https://github.com/MoustaphaCamara/hcse-app/blob/master/stars_app.sql)
 
-Now run the command migrate to send the project's tables to the database :
+Method 2 :
+
+Run the command 
 ```
 php artisan migrate
 ```
-Note : if you hadn't created "stars_app" database beforehand, you will get a Warn 'The database 'stars_app' does not exist on the "mysql" connection. Would you like to create it? (yes/no)' by default on 'no'. Select 'yes'.
 
+Since the database isn't created yet, you will get a warning : `The database 'stars_app' does not exist on the "mysql" connection. Would you like to create it? (yes/no)` by default on 'no'. Select 'yes'.
+
+It will create the database based on the name filled in .env file.
+
+Method 3 : 
+
+Create manually the database in phpMyAdmin. utf encode is utf8mb4.
+
+Please note that the name  should be the same one as the variable in .env file named "DB_DATABASE". Same goes for your DB_USERNAME and DB_PASSWORD. Encode in utf8mb4.
+
+You can now run the `php artisan migrate` command.
 
 ## Run the project
 
