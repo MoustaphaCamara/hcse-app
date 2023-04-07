@@ -9,46 +9,10 @@
       <div
         class="w-full flex justify-center items-center bg-light-main rounded-2xl mt-7"
       >
-        <ul class="w-1/3 bg-second border-dark-second text-slate-800">
-          <li
-            class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b text-slate-900 border-dark-second hover:bg-dark-second focus:z-10 focus:ring-2"
-            v-for="(star, key) in stars"
-            :key="key"
-            @click="changeCurrent(star.id)"
-          >
-            <div class="flex items-center space-x-4">
-              <div class="flex-shrink-0">
-                <img :src="star.src" alt="" class="w-8 h-8 rounded-full" />
-              </div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm font-bold text-slate-900 truncate">
-                  {{ star.lastname }}
-                </p>
-                <p class="text-sm truncate">
-                  {{ star.firstname }}
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <!-- display active star -->
-        <div class="bg-light-main w-2/3 h-full app__star-container">
-          <img
-            :src="stars[currentIndex].src"
-            alt=""
-            class="mx-auto rounded-2xl"
-          />
-          <h2 class="app__container-title">
-            {{ stars[currentIndex].firstname }}
-            {{ stars[currentIndex].lastname }}
-          </h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam hic
-            eum ullam libero sit temporibus aliquid odio voluptates, delectus
-            vel animi. Hic eveniet, mollitia similique error voluptatibus ullam
-            itaque cumque!
-          </p>
-        </div>
+        <!-- list of Stars -->
+        <StarList :stars="stars" @onCurrentChange="changeIndex($event)" />
+        <!-- active star profile -->
+        <StarProfile :stars="stars" :currentIndex="currentIndex" />
       </div>
     </div>
     <div v-else>
@@ -57,12 +21,20 @@
         d'admin !
       </p>
     </div>
+    <!-- end of else -->
   </div>
 </template>
 
 <script>
+import StarList from "../components/star/StarList.vue";
+import StarProfile from "../components/star/StarProfile.vue";
+
 export default {
   name: "HomePage",
+  components: {
+    StarList,
+    StarProfile,
+  },
   data() {
     return {
       stars: [],
@@ -87,11 +59,12 @@ export default {
           this.stars = [];
         });
     },
-    changeCurrent(id) {
-      this.currentIndex = id - 1;
-      console.log(this.currentIndex);
+    changeIndex(param) {
+      this.currentIndex = param - 1;
+      // console.log(param);
     },
   },
+  components: { StarList, StarProfile },
 };
 </script>
 
