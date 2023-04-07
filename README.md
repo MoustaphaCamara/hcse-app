@@ -45,7 +45,7 @@ For this project, I used WAMP. You can apply the next steps with any environment
 
 Method 1 :
 
-Open phpMyAdmin and import the following database : [stars_app](https://github.com/MoustaphaCamara/hcse-app/blob/master/stars_app.sql)
+Open phpMyAdmin, create a new database named "stars_app" and import the following : [stars_app](https://github.com/MoustaphaCamara/hcse-app/blob/master/stars_app.sql)
 
 Method 2 :
 
@@ -60,7 +60,7 @@ It will create the database based on the name filled in .env file.
 
 Method 3 : 
 
-Create manually the database in phpMyAdmin. utf encode is utf8mb4.
+Create empty database in phpMyAdmin. utf encode is utf8mb4.
 
 Please note that the name  should be the same one as the variable in .env file named "DB_DATABASE". Same goes for your DB_USERNAME and DB_PASSWORD. Encode in utf8mb4.
 
